@@ -6,6 +6,8 @@
 // @author       Satanarious
 // @match        https://romspure.cc/roms/sony-playstation-3/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=romspure.cc
+// @updateURL    https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_GamePage.js
+// @downloadURL  https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_GamePage.js
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
 
