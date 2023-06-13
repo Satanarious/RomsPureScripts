@@ -11,11 +11,6 @@
 // @updateURL    https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_GamePage.js
 // @downloadURL  https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_GamePage.js
 // @grant        GM_xmlhttpRequest
-// @connect      raw.githubusercontent.com
-// @connect      gist.githubusercontent.com
-// @connect      cdnjs.cloudflare.com
-// @connect      cdn.jsdelivr.net
-// @run-at       document-end
 // ==/UserScript==
 
 (function () {
