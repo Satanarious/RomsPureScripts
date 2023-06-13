@@ -58,7 +58,7 @@
     return new Promise((resolve, reject) => {
       GM_xmlhttpRequest({
         method: "GET",
-        url: `https://rpcs3.net/compatibility?g=${gameName}#jump`,
+        url: `https://rpcs3.net/compatibility?g=${gameName}&type=1`,
         onload: function (response) {
           const parser = new DOMParser();
           const htmlDoc = parser.parseFromString(
