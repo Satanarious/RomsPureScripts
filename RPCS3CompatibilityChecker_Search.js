@@ -4,13 +4,19 @@
 // @version      0.1
 // @description  Check and display the compatibility status of RPCS3 games on the PS3 page of RomsPure Search
 // @author       Satanarious
-// @copyright      2023+, Satyam Singh Niranjan, https://github.com/Satanarious
+// @license      MIT License
+// @copyright    2023+, Satyam Singh Niranjan, https://github.com/Satanarious
 // @match        https://romspure.cc/roms/sony-playstation-3?*
 // @match        https://romspure.cc/roms/sony-playstation-3
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=romspure.cc
 // @updateURL    https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_Search.js
 // @downloadURL  https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_Search.js
 // @grant        GM_xmlhttpRequest
+// @connect      raw.githubusercontent.com
+// @connect      gist.githubusercontent.com
+// @connect      cdnjs.cloudflare.com
+// @connect      cdn.jsdelivr.net
+// @run-at       document-end
 // ==/UserScript==
 
 (function () {
