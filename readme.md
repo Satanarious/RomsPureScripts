@@ -10,8 +10,8 @@ Various userscripts for RomsPure to enhance various aspects of the website
 
 </tr>
 <tr>
-<td><a href="https://www.github.com/Satanarious/RomsPureScripts/raw/master/RPCS3CompatibilityChecker_Search.js">Install here</a>
-<td><a href="https://www.github.com/Satanarious/RomsPureScripts/raw/master/RPCS3CompatibilityChecker_GamePage.js">Install here</a>
+<td><a href="https://www.github.com/Satanarious/RomsPureScripts/raw/master/RPCS3CompatibilityChecker_Search.user.js">Install here</a>
+<td><a href="https://www.github.com/Satanarious/RomsPureScripts/raw/master/RPCS3CompatibilityChecker_GamePage.user.js">Install here</a>
 </tr>
 <tr>
 <td>
