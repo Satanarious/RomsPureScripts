@@ -4,7 +4,8 @@
 // @version      0.1
 // @description  Check and display the compatibility status of RPCS3 games on the PS3 page of RomsPure Search
 // @author       Satanarious
-// @match        https://romspure.cc/roms/sony-playstation-3*
+// @match        https://romspure.cc/roms/sony-playstation-3?*
+// @match        https://romspure.cc/roms/sony-playstation-3
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=romspure.cc
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
@@ -34,9 +35,8 @@
     const gameName = gameRows[index].querySelector(
       "td:nth-child(2) > a"
     ).textContent;
-    var colour;
-    checkCompatibility(gameName, index)
-      .then((compatibilityStatus, index) => {
+    checkCompatibility(gameName)
+      .then((compatibilityStatus) => {
         gameArtSelector.style.border = `4px solid ${getColourForStatus(
           compatibilityStatus
         )}`;
@@ -54,9 +54,7 @@
     return new Promise((resolve, reject) => {
       GM_xmlhttpRequest({
         method: "GET",
-        url: `https://rpcs3.net/compatibility?g=${encodeURIComponent(
-          gameName
-        )}`,
+        url: `https://rpcs3.net/compatibility?g=${gameName}#jump`,
         onload: function (response) {
           const parser = new DOMParser();
           const htmlDoc = parser.parseFromString(
