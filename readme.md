@@ -2,17 +2,16 @@
 
 Various userscripts for RomsPure to enhance various aspects of the website
 
-<table border=2px >
+<table border=2px>
 <tr>
-
 <th>RPCS3 Compatibility Checker(Search)
 <th>RPCS3 Compatibility Checker(Game Page)
-
 </tr>
 <tr>
 <td><a href="https://www.github.com/Satanarious/RomsPureScripts/raw/master/RPCS3CompatibilityChecker_Search.user.js">Install here</a>
 <td><a href="https://www.github.com/Satanarious/RomsPureScripts/raw/master/RPCS3CompatibilityChecker_GamePage.user.js">Install here</a>
 </tr>
+<tr><td colspan=2><img src="screenshots/info.png"></tr>
 <tr>
 <td>
 RPCS3 compatibility checker for the search page, help you easily look at the compatibility status of the available games with the help of a border overlay.
