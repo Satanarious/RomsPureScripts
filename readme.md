@@ -2,6 +2,12 @@
 
 Various userscripts for RomsPure to enhance various aspects of the website
 
+### Requires(Any of the below):
+- [Tampermonkey](https://www.tampermonkey.net/)
+- [Violentmonkey](https://violentmonkey.github.io/get-it/)
+- [Greasemonkey](https://www.greasespot.net/)
+
+
 <table border=2px>
 <tr>
 <th>RPCS3 Compatibility Checker(Search)
