@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RPCS3 Compatibility Checker(Game Page)
 // @namespace    https://github.com/Satanarious
-// @version      0.1
+// @version      0.2
 // @description  Check and display the compatibility status of RPCS3 games on the PS3 page of RomsPure Game Page
 // @author       Satanarious
 // @license      MIT License
