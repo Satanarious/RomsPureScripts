@@ -6,6 +6,8 @@
 // @author       Satanarious
 // @license      MIT License
 // @copyright    2023+, Satyam Singh Niranjan, https://github.com/Satanarious
+// @exclude        https://romspure.cc/roms/sony-playstation-3/page/*
+// @exclude        https://romspure.cc/roms/sony-playstation-3/?*
 // @match        https://romspure.cc/roms/sony-playstation-3/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=romspure.cc
 // @updateURL    https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_GamePage.js
@@ -30,64 +32,23 @@
     "<h5><div id='p' style='display:inline-block;color:#ee301d;text-decoration:underline;'>Loadable</div> : Games that display a black screen with a framerate on the window's title</h5>";
   // Add Currently Opened Game Compatibility Status
   const currentGameName = document.querySelector("#primary > h1").textContent;
-  const tableBody = document.querySelector(
-    "#primary > div.row > div.col-12.col-sm-8 > div > div.col-12.col-md-9 > table > tbody"
-  );
+  const tableBody = document.getElementsByTagName("table")[0];
+
   checkCompatibility(currentGameName)
     .then((compatibility) => {
-      tableBody.innerHTML += `<tr><th style='color:#6c757d'>RPCS3 Compatibility<td style='color:${getColourForStatus(
-        compatibility
-      )}'>${compatibility}</tr>`;
+      const colour = getColourForStatus(compatibility);
+      tableBody.innerHTML += `<tr><th style='color:#6c757d'>RPCS3 Compatibility<td>
+      <a href='https://rpcs3.net/compatibility?g=${currentGameName}#jump' style='color:${colour}'>
+      <div style='border:2px solid ${colour}; width:100px; height: 40px; border-radius:20px;display: flex;justify-content: center;align-items: center;'> ${compatibility}</div></a></tr>`;
     })
     .catch((error) => {
       console.error("Error fetching compatibility status:", error);
     });
-  // Add Popular Roms Compatibility Status
-  const popularWidgets = document
-    .querySelector("#secondary > section")
-    .getElementsByClassName("media mb-3");
-  Array.prototype.slice.call(popularWidgets).forEach((widget, index) => {
-    const gameArtSelector = widget.getElementsByTagName("a")[0];
-    const gameNameSelector = widget.querySelector("div > h5").textContent;
-    checkCompatibility(gameNameSelector)
-      .then((compatibilityStatus) => {
-        gameArtSelector.style.border = `4px solid ${getColourForStatus(
-          compatibilityStatus
-        )}`;
-        console.log(
-          `Compatibility status for ${gameNameSelector}: ${compatibilityStatus}`
-        );
-      })
-      .catch((error) => {
-        console.error("Error fetching compatibility status:", error);
-      });
-  });
-  // Add Recommended Roms Compatibility Status
-  const recommendedWidgets = document
-    .querySelector("#primary > section:nth-child(9)")
-    .getElementsByClassName("col-12 col-sm-6 mb-4");
-  Array.prototype.slice.call(recommendedWidgets).forEach((widget, index) => {
-    const gameArtSelector = widget.querySelector("div.media > a");
-    const gameNameSelector = widget.querySelector(
-      "div.media > div.media-body > h3 > a"
-    ).textContent;
-    checkCompatibility(gameNameSelector)
-      .then((compatibilityStatus) => {
-        gameArtSelector.style.border = `4px solid ${getColourForStatus(
-          compatibilityStatus
-        )}`;
-        console.log(
-          `Compatibility status for ${gameNameSelector}: ${compatibilityStatus}`
-        );
-      })
-      .catch((error) => {
-        console.error("Error fetching compatibility status:", error);
-      });
-  });
 
   // Function to fetch compatibility status
   function checkCompatibility(gameName) {
     return new Promise((resolve, reject) => {
+      // eslint-disable-next-line no-undef
       GM_xmlhttpRequest({
         method: "GET",
         url: `https://rpcs3.net/compatibility?g=${gameName}&type=1`,
