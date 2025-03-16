@@ -8,7 +8,7 @@
 // @copyright    2023+, Satyam Singh Niranjan, https://github.com/Satanarious
 // @match        https://romspure.cc/roms/sony-playstation-3/page/*
 // @match        https://romspure.cc/roms/sony-playstation-3/*
-// @match        https://romspure.cc/roms/sony-playstation-3
+// @match        https://romspure.cc/roms/sony-playstation-3?*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=romspure.cc
 // @updateURL    https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_Search.js
 // @downloadURL  https://raw.githubusercontent.com/Satanarious/RomsPureScripts/master/RPCS3CompatibilityChecker_Search.js
